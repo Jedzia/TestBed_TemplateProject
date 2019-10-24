@@ -21,4 +21,4 @@ if (CMAKE_SYSTEM STREQUAL "Linux")
     message("Building MIPS target with ${VUDUO_C_FLAGS}")
 endif ()
 
-add_executable(STD17 main.cpp)
+add_executable(STD17 src/main.cpp)
