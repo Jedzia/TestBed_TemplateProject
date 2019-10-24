@@ -1,6 +1,7 @@
 #include <iostream>
 #include <memory>
 #include "MyClass.h"
+#include <STD17lib/library.h>
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
@@ -11,6 +12,7 @@ int main() {
     auto lambda = [](auto a) { std::cout << "lambada='" << a << "'." << std::endl; };
     lambda("I'm da lambda");
 
+    MyLibrary m;
     MyClass mc;
     std::cout << "MyClass=.DoSomething()='" << mc.DoSomething() << "'." << std::endl;
 
@@ -18,7 +20,7 @@ int main() {
         auto p = std::make_unique<MyClass>();
         std::cout << "*MyClass=.DoSomething()='" << p->DoSomething() << "'." << std::endl;
     }
-    
+
     std::cout << "goodbye" << std::endl;
     return 0;
 }

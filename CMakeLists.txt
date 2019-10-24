@@ -26,5 +26,6 @@ enable_testing()
 #INCLUDE(CTest)
 
 # ADD OUR TESTING DIRECTORY
+add_subdirectory(lib/)
 add_subdirectory(src/)
 add_subdirectory(test/)

@@ -5,6 +5,7 @@
       <config projectName="STD17" targetName="gtest" />
       <config projectName="STD17" targetName="main_test" />
       <config projectName="STD17" targetName="gtest_main" />
+      <config projectName="STD17" targetName="STD17lib" />
       <config projectName="STD17" targetName="gmock" />
       <config projectName="STD17" targetName="STD17" />
       <config projectName="STD17" targetName="Google_Tests_run" />
@@ -19,17 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyClass.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyClass.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/GoogleTest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/lib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/main_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/library.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/STD17lib/src/library.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/GoogleTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/GoogleTest.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +71,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include\STD17" />
+      <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include" />
+      <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\src" />
+      <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib" />
       <recent name="E:\Projects\VU\cpp\STD17\src" />
     </key>
   </component>
@@ -87,8 +90,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.DateConverterFixture">
-    <configuration name="DateConverterFixture" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="Google_Tests_run" RUN_TARGET_PROJECT_NAME="STD17" RUN_TARGET_NAME="Google_Tests_run" TEST_CLASS="DateConverterFixture" TEST_MODE="SUITE_TEST">
+  <component name="RunManager" selected="CMake Application.STD17 local">
+    <configuration name="DateConverterFixture" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="Google_Tests_run" CONFIG_NAME="Debug mips" RUN_TARGET_PROJECT_NAME="STD17" RUN_TARGET_NAME="Google_Tests_run" TEST_CLASS="DateConverterFixture" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -108,6 +111,11 @@
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_cp to \\VUDUO2X dlang" />
+      </method>
+    </configuration>
+    <configuration name="STD17lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="STD17lib" CONFIG_NAME="Debug mips">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="gmock" CONFIG_NAME="Debug mips">
@@ -137,6 +145,7 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.STD17 local" />
+      <item itemvalue="CMake Application.STD17lib" />
       <item itemvalue="CMake Application.STD17" />
       <item itemvalue="CMake Application.Google_Tests_run" />
       <item itemvalue="CMake Application.main_test" />
@@ -164,7 +173,7 @@
       <updated>1571913526413</updated>
       <workItem from="1571913527681" duration="188000" />
       <workItem from="1571913737271" duration="8235000" />
-      <workItem from="1571922001162" duration="5240000" />
+      <workItem from="1571922001162" duration="6859000" />
     </task>
     <servers />
   </component>
