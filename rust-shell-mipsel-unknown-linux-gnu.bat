@@ -14,13 +14,15 @@ set OPENSSL_DIR=C:\Toolchain\MIPS\openssl\usr
 
 set MAKEFLAGS=-j8
 
+set CMAKE_SYSTEM_NAME=Linux
+
 REM call C:\D\ldc2vars64.bat
 rem e:
 rem cd E:\Projects\D
 
 echo .
 echo .
-echo cargo build --target=mipsel-unknown-linux-gnu
+echo -DCMAKE_SYSTEM_NAME=Linux
 echo xargo build --target=mipsel-unknown-linux-gnu
 echo cargo build --target=x86_64-pc-windows-gnu
 echo .
