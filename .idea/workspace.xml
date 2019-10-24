@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/library.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/STD17lib/src/library.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/GoogleTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/GoogleTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +165,7 @@
       <updated>1571913526413</updated>
       <workItem from="1571913527681" duration="188000" />
       <workItem from="1571913737271" duration="8235000" />
-      <workItem from="1571922001162" duration="6859000" />
+      <workItem from="1571922001162" duration="7667000" />
     </task>
     <servers />
   </component>
