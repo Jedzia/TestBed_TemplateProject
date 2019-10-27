@@ -4,12 +4,11 @@ add_subdirectory(lib)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
-
 # ADD OUR TEST EXECUTABLES
 set(SOURCE_FILES main_test.cpp)
 add_executable(main_test main_test.cpp)
 #target_link_libraries(main_test ${Boost_LIBRARIES})
-target_link_libraries(main_test )
+target_link_libraries(main_test)
 # OUR TEST NEEDS THIS EXECUTABLE TO BE BUILT FIRST...
 add_dependencies(main_test STD17)
 
@@ -17,7 +16,7 @@ add_dependencies(main_test STD17)
 add_test(NAME test_main COMMAND main_test)
 
 # adding the Google_Tests_run target
-add_executable(Google_Tests_run  GoogleTest.cpp)
+add_executable(Google_Tests_run GoogleTest.cpp)
 
 # linking Google_Tests_run with DateConverter_lib which will be tested
 #target_link_libraries(Google_Tests_run DateConverter_lib)

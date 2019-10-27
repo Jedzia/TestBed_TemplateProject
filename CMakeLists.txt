@@ -25,7 +25,8 @@ endif ()
 enable_testing()
 #INCLUDE(CTest)
 
-# ADD OUR TESTING DIRECTORY
 add_subdirectory(lib/)
 add_subdirectory(src/)
+
+# ADD OUR TESTING DIRECTORY
 add_subdirectory(test/)
