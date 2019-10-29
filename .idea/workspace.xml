@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/network.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/STD17lib/src/platform/win/network.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +56,9 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="LLMpkJLz" />
   </component>
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-STD17lib" />
+  </component>
   <component name="ProjectId" id="1SeA8FA3kKVgIUe9EcKqjqh6ujn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -67,11 +70,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\VU\cpp\STD17Playground\lib\STD17lib\include\STD17lib" />
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include\STD17" />
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include" />
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\src" />
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib" />
-      <recent name="E:\Projects\VU\cpp\STD17\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -170,7 +173,8 @@
       <workItem from="1571913527681" duration="188000" />
       <workItem from="1571913737271" duration="8235000" />
       <workItem from="1571922001162" duration="8438000" />
-      <workItem from="1572134391204" duration="36000" />
+      <workItem from="1572134391204" duration="1119000" />
+      <workItem from="1572221472694" duration="3461000" />
     </task>
     <servers />
   </component>

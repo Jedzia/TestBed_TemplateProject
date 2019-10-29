@@ -3,6 +3,9 @@
 #include "MyClass.h"
 #include <STD17lib/library.h>
 
+#include <winsock2.h>
+#include <ws2tcpip.h>
+
 int main() {
     std::cout << "Hello, World!" << std::endl;
     auto f = 3.14159f;
