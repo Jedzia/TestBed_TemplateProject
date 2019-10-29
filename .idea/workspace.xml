@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/network.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/STD17lib/src/platform/win/network.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLion gcc-mipsel-unknown-linux-gnu.bat" beforeDir="false" afterPath="$PROJECT_DIR$/CLion gcc-mipsel-unknown-linux-gnu.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,6 +171,7 @@
       <workItem from="1571922001162" duration="8438000" />
       <workItem from="1572134391204" duration="1119000" />
       <workItem from="1572221472694" duration="3461000" />
+      <workItem from="1572364327333" duration="169000" />
     </task>
     <servers />
   </component>
