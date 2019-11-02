@@ -3,11 +3,14 @@
 #include "MyClass.h"
 #include <STD17lib/library.h>
 
+#ifdef WIN32
 #include <winsock2.h>
 #include <ws2tcpip.h>
+#endif
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Fucking Hello, World!" << std::endl;
     auto f = 3.14159f;
     std::cout << "Float=" << f << std::endl;
     std::cout << "Float=" << f * 6 << std::endl;
