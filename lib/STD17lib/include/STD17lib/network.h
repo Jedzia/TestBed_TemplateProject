@@ -6,8 +6,16 @@
 #define STD17_NETWORK_H
 
 
-class network {
+class Network {
+public:
+    Network();
 
+    virtual ~Network();
+
+    void getName();
+
+private:
+    static bool initialized;
 };
 
 

@@ -2,11 +2,7 @@
 #include <memory>
 #include "MyClass.h"
 #include <STD17lib/library.h>
-
-#ifdef WIN32
-#include <winsock2.h>
-#include <ws2tcpip.h>
-#endif
+#include <STD17lib/network.h>
 
 
 int main() {
@@ -27,6 +23,10 @@ int main() {
         std::cout << "*MyClass=.DoSomething()='" << p->DoSomething() << "'." << std::endl;
     }
 
+    Network net;
+    net.getName();
+
+    std::cout << std::endl << std::endl;
     std::cout << "goodbye" << std::endl;
     return 0;
 }
