@@ -18,12 +18,15 @@ set(HeaderFiles
         include/CBreadBoard/library.h
         include/CBreadBoard/network.h
         include/CBreadBoard/serial.h
+        include/CBreadBoard/Arduino.h
+        include/CBreadBoard/cbreadboard.h
         )
 
 set(SourceFiles
         ${PLATFORM_SourceFiles}
         src/library.cpp
         src/serial.cpp
+        src/Arduino.cpp
         )
 
 include_directories(include)

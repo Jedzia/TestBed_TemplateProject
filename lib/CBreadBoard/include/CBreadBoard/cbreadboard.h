@@ -7,4 +7,8 @@
 
 #include <CBreadBoard/serial.h>
 
+namespace cbb {
+//#include <CBreadBoard/serial.h>
+}
+
 #endif //STD17_CBREADBOARD_H

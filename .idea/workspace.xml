@@ -21,19 +21,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/library.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/network.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/serial.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/library.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/linux/network.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/win/network.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/serial.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/Arduino.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/Arduino.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/STD17lib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/serial.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/serial.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/serial.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/serial.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,6 +61,9 @@
     <option name="directoryName" value="LLMpkJLz" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-CBreadBoard" />
+  </component>
   <component name="ProjectId" id="1SeA8FA3kKVgIUe9EcKqjqh6ujn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -201,7 +198,7 @@
       <workItem from="1572718132476" duration="643000" />
       <workItem from="1572724716819" duration="3271000" />
       <workItem from="1572780888806" duration="7459000" />
-      <workItem from="1573187127957" duration="3653000" />
+      <workItem from="1573187127957" duration="5251000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -239,7 +236,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>81</line>
+          <line>90</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

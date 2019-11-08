@@ -1,16 +1,23 @@
+#pragma ide diagnostic ignored "readability-static-accessed-through-instance"
+
 #include <iostream>
 #include <memory>
+#include <chrono>
+
 #include "MyClass.h"
+
 #include <STD17lib/library.h>
 #include <STD17lib/network.h>
 #include <STD17lib/fsm.h>
+
 #include <CBreadBoard/cbreadboard.h>
-#include <chrono>
+#include <CBreadBoard/Arduino.h>
 
 // State machine variables
 #define FLIP_LIGHT_SWITCH 1
 
-SerialCom Serial;
+using namespace cbb;
+//SerialCom Serial;
 
 // Transition callback functions
 void on_light_on_enter() {
@@ -62,6 +69,8 @@ int main() {
     std::cout << std::endl;
 
 
+    // State-Machine Mambo Jumbo
+
     State state_light_on(on_light_on_enter, NULL, &on_light_on_exit);
     State state_light_off(on_light_off_enter, NULL, &on_light_off_exit);
     Fsm fsm(&state_light_off);
@@ -78,10 +87,20 @@ int main() {
 
     // No "fsm.run_machine()" call needed as no "on_state" funcions or timmed transitions exists
     fsm.run_machine();
-    //delay(2000);
+    delay(2000);
     fsm.trigger(FLIP_LIGHT_SWITCH);
-    //delay(2000);
+    delay(2000);
     fsm.trigger(FLIP_LIGHT_SWITCH);
+
+    std::cout << std::endl;
+    std::cout << std::endl;
+
+
+    for (int i = 0; i < 3; ++i) {
+        std::cout << "Timed loop " << i << std::endl;
+        delay(1000);
+    }
+
 
     std::cout << std::endl << std::endl;
     std::cout << "goodbye" << std::endl;

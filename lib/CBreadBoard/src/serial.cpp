@@ -5,8 +5,12 @@
 #include "../include/CBreadBoard/serial.h"
 #include <iostream>
 
-//static SerialCom Serial;
+namespace cbb {
 
-void SerialCom::println(const char* c){
-    std::cout << c << std::endl;
+    //static SerialCom Serial;
+
+    void SerialCom::println(const char *c) {
+        std::cout << c << std::endl;
+    }
+
 }
