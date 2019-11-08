@@ -28,5 +28,5 @@ int main() {
 
     std::cout << std::endl << std::endl;
     std::cout << "goodbye" << std::endl;
-    return 0;
+    return 1;
 }
