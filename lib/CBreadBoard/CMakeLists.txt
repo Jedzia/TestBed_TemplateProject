@@ -1,4 +1,4 @@
-project(STD17lib)
+project(CBreadBoard)
 
 if (WIN32)
     set(PLATFORM_HeaderFiles
@@ -15,16 +15,16 @@ endif ()
 
 set(HeaderFiles
         ${PLATFORM_HeaderFiles}
-        include/STD17lib/library.h
-        include/STD17lib/network.h
-        include/STD17lib/fsm.h
+        include/CBreadBoard/library.h
+        include/CBreadBoard/network.h
+        include/CBreadBoard/serial.h
         )
 
 set(SourceFiles
         ${PLATFORM_SourceFiles}
         src/library.cpp
-        src/fsm.cpp
+        src/serial.cpp
         )
 
 include_directories(include)
-add_library(STD17lib ${SourceFiles} ${HeaderFiles})
+add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
