@@ -21,7 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/interrupt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/interrupt.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,11 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib\CBreadBoard\src" />
       <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib\CBreadBoard\include\CBreadBoard" />
       <recent name="E:\Projects\VU\cpp\STD17Playground\lib\STD17lib\include\STD17lib" />
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include\STD17" />
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include" />
-      <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib" />
@@ -192,7 +196,7 @@
       <workItem from="1572718132476" duration="643000" />
       <workItem from="1572724716819" duration="3271000" />
       <workItem from="1572780888806" duration="7459000" />
-      <workItem from="1573187127957" duration="5585000" />
+      <workItem from="1573187127957" duration="8651000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -201,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572794466923</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adjusted delay, no patience here:P">
+      <created>1573193132905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573193132905</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,14 +234,16 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="linux and windows platform network" />
-    <option name="LAST_COMMIT_MESSAGE" value="linux and windows platform network" />
+    <MESSAGE value="adjusted delay, no patience here:P" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjusted delay, no patience here:P" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>91</line>
+          <line>92</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

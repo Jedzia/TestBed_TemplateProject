@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <chrono>
+#include <conio.h>
 
 #include "MyClass.h"
 
@@ -102,6 +103,19 @@ int main() {
         delay(500);
     }
 
+
+    /*std::cout << "Press any key..." << std::endl;
+    while(1)
+    {
+        if(kbhit())
+        {
+            break;
+        }
+    }*/
+
+
+    Interrupt i1;
+    Interrupt i2;
 
     std::cout << std::endl << std::endl;
     std::cout << "goodbye" << std::endl;

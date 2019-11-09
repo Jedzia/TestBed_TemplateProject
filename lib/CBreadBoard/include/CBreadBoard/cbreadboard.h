@@ -6,6 +6,7 @@
 #define STD17_CBREADBOARD_H
 
 #include <CBreadBoard/serial.h>
+#include <CBreadBoard/interrupt.h>
 
 namespace cbb {
 //#include <CBreadBoard/serial.h>
