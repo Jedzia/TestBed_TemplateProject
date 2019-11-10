@@ -70,10 +70,11 @@ void setupIRQ() {
     sei();
 }
 
+#define ISR(x) void x()
 
+ISR(TIMER1_COMPA_vect) {
+    std::cout << "Fn(TIMER1_COMPA_vect)" << std::endl;
 
-//
-//ISR(TIMER1_COMPA_vect) {
 //        //PORTB ^= B00100000;// toggles bit which affects pin13
 //        if(shouldBlinkShort)
 //        {
@@ -122,8 +123,8 @@ void setupIRQ() {
 //        }
 //
 //
-//}
-//
+}
+
 
 #define butInput1     4
 #define butInput2     7
@@ -199,9 +200,18 @@ int main() {
     std::cout << std::endl;
     std::cout << std::endl;
 
+    Interrupt i1;
+    Interrupt i2;
 
-    for (int i = 0; i < 3; ++i) {
+
+    for (int i = 0; i < 5; ++i) {
         std::cout << "Timed loop " << i << std::endl;
+
+        Pin led_red("Red LED", "PortA", "LED1Pin");
+        digitalWrite(led_red, i % 2);
+
+        TIMER1_COMPA_vect();
+
         delay(500);
     }
 
@@ -216,8 +226,6 @@ int main() {
     }*/
 
 
-    Interrupt i1;
-    Interrupt i2;
 
 
     /*// here is where you'd put code that needs to be running all the time.
@@ -249,3 +257,4 @@ int main() {
     std::cout << "goodbye" << std::endl;
     return 1;
 }
+
