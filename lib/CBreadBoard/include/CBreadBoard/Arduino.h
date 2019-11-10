@@ -7,4 +7,7 @@
 
 void delay(unsigned int milliseconds);
 
+void cli();
+void sei();
+
 #endif //STD17_ARDUINO_H

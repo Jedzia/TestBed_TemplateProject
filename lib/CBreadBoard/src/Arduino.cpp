@@ -9,3 +9,7 @@ void delay(unsigned int milliseconds) {
     usleep(1000 * milliseconds);
 }
 
+void cli() { }
+
+void sei() { }
+
