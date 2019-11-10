@@ -5,6 +5,7 @@
 #ifndef STD17_CBREADBOARD_H
 #define STD17_CBREADBOARD_H
 
+#include <CBreadBoard/io.h>
 #include <CBreadBoard/serial.h>
 #include <CBreadBoard/interrupt.h>
 

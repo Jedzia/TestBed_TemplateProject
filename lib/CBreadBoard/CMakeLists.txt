@@ -28,7 +28,7 @@ set(SourceFiles
         src/library.cpp
         src/serial.cpp
         src/Arduino.cpp
-        src/interrupt.cpp src/memory.cpp)
+        src/interrupt.cpp src/memory.cpp src/io.cpp include/CBreadBoard/io.h)
 
 include_directories(include)
 add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})

@@ -8,7 +8,7 @@
 
 namespace cbb {
     class memory {
-        //(*(volatile uint8_t *)(0x00)) = 1;
+        //Whats normally a memory address, a.k.a. (*(volatile uint8_t *)(0x00)) = 1; define as stub
 
         static void DoSomething();
     };

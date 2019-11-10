@@ -46,21 +46,21 @@ void on_trans_light_off_light_on() {
 }
 
 
-//void setupIRQ()
-//{
-//    //DDRB |= B00100000;  // set pin13 to output without affecting other pins
-//    // above is identical to pinMode(LEDPIN, OUTPUT); using Direct Port Manipulation
+void setupIRQ()
+{
+    //DDRB |= B00100000;  // set pin13 to output without affecting other pins
+    // above is identical to pinMode(LEDPIN, OUTPUT); using Direct Port Manipulation
 //    cli();
-//    TCCR1A = 0;
-//    TCCR1B = 0;
-//    OCR1A = 15624/8;  // = (target time / timer resolution) - 1 or 1 / 6.4e-5 - 1 = 15624
-//    //OCR1A = 15624>>1;  // divide by two >>EDIT added this line<<
-//    TCCR1B |= (1 << WGM12);// CTC mode on
-//    TCCR1B |= (1 << CS10);// Set CS10 and CS12 bits for 1024 prescaler:
-//    TCCR1B |= (1 << CS12);
-//    TIMSK1 |= (1 << OCIE1A);// timer compare intrupt
+    TCCR1A = 0;
+    TCCR1B = 0;
+    OCR1A = 15624/8;  // = (target time / timer resolution) - 1 or 1 / 6.4e-5 - 1 = 15624
+    //OCR1A = 15624>>1;  // divide by two >>EDIT added this line<<
+    TCCR1B |= (1 << WGM12);// CTC mode on
+    TCCR1B |= (1 << CS10);// Set CS10 and CS12 bits for 1024 prescaler:
+    TCCR1B |= (1 << CS12);
+    TIMSK1 |= (1 << OCIE1A);// timer compare intrupt
 //    sei();
-//}
+}
 
 
 //
@@ -116,6 +116,16 @@ void on_trans_light_off_light_on() {
 //}
 //
 
+#define butInput1     4
+#define butInput2     7
+#define butInput3     8
+#define butInput4    12
+#define butInput5     6
+#define butInput6   SDA
+
+#define LED1Pin      13
+#define LED2Pin       5
+
 
 int main() {
 
@@ -141,6 +151,16 @@ int main() {
 
     std::cout << std::endl;
     std::cout << std::endl;
+
+
+    /* MCU Code ToDo: introduce setup() and loop(), later */
+
+    setupIRQ();
+
+
+//    pinMode(LED1Pin, OUTPUT);  // enable LED1 output
+//    pinMode(LED2Pin, OUTPUT);  // enable LED1 output
+
 
 
     // State-Machine Mambo Jumbo

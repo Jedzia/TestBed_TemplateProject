@@ -21,10 +21,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/memory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/memory.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/avrgcc/iom328p.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/avrgcc/sfr_defs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/io.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/memory.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +70,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/avrgcc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
@@ -80,6 +84,7 @@
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib\CBreadBoard\include\CBreadBoard\avrgcc" />
       <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib" />
       <recent name="E:\Projects\VU\cpp\STD17Playground\lib\STD17lib\src\platform\linux" />
     </key>
@@ -195,7 +200,7 @@
       <workItem from="1572718132476" duration="643000" />
       <workItem from="1572724716819" duration="3271000" />
       <workItem from="1572780888806" duration="7459000" />
-      <workItem from="1573187127957" duration="11320000" />
+      <workItem from="1573187127957" duration="13613000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -218,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573269118223</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="prepared memory simulation">
+      <created>1573375021318</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573375021318</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +254,8 @@
     <MESSAGE value="linux and windows platform network" />
     <MESSAGE value="adjusted delay, no patience here:P" />
     <MESSAGE value="prepared interrupt simulation and static construction" />
-    <option name="LAST_COMMIT_MESSAGE" value="prepared interrupt simulation and static construction" />
+    <MESSAGE value="prepared memory simulation" />
+    <option name="LAST_COMMIT_MESSAGE" value="prepared memory simulation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -250,7 +263,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>165</line>
+          <line>183</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
