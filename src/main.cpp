@@ -45,7 +45,80 @@ void on_trans_light_off_light_on() {
     Serial.println("Transitioning from LIGHT_OFF to LIGHT_ON");
 }
 
+
+//void setupIRQ()
+//{
+//    //DDRB |= B00100000;  // set pin13 to output without affecting other pins
+//    // above is identical to pinMode(LEDPIN, OUTPUT); using Direct Port Manipulation
+//    cli();
+//    TCCR1A = 0;
+//    TCCR1B = 0;
+//    OCR1A = 15624/8;  // = (target time / timer resolution) - 1 or 1 / 6.4e-5 - 1 = 15624
+//    //OCR1A = 15624>>1;  // divide by two >>EDIT added this line<<
+//    TCCR1B |= (1 << WGM12);// CTC mode on
+//    TCCR1B |= (1 << CS10);// Set CS10 and CS12 bits for 1024 prescaler:
+//    TCCR1B |= (1 << CS12);
+//    TIMSK1 |= (1 << OCIE1A);// timer compare intrupt
+//    sei();
+//}
+
+
+//
+//ISR(TIMER1_COMPA_vect) {
+//        //PORTB ^= B00100000;// toggles bit which affects pin13
+//        if(shouldBlinkShort)
+//        {
+//            bool led1State = digitalRead(LED1Pin);
+//            digitalWrite(LED1Pin, led1State ^ 1);
+//            if(led1State)
+//            {
+//                shouldBlinkShort = false;
+//            }
+//        }
+//
+//        /*if(shouldBlinkLong)
+//        {
+//          bool led2State = digitalRead(LED2Pin);
+//          digitalWrite(LED2Pin, led2State ^ 1);
+//          if(led2State)
+//          {
+//            shouldBlinkLong = false;
+//          }
+//        }*/
+//
+//        if(shortBlink)
+//        {
+//            //bool led2State = digitalRead(LED2Pin);
+//            //digitalWrite(LED2Pin, led2State ^ 1);
+//            //digitalWrite(LED2Pin, !((shortBlink % 4) <= 2));
+//            digitalWrite(LED2Pin, !((shortBlink % 2) ));
+//            /*if(led2State)
+//            {
+//              shouldBlinkLong = false;
+//            }*/
+//            shortBlink--;
+//        }
+//
+//
+//        if(longBlink)
+//        {
+//            //bool led2State = digitalRead(LED2Pin);
+//            //digitalWrite(LED2Pin, led2State ^ 1);
+//            digitalWrite(LED2Pin, !((longBlink % 8) <= 4));
+//            /*if(led2State)
+//            {
+//              shouldBlinkLong = false;
+//            }*/
+//            longBlink--;
+//        }
+//
+//
+//}
+//
+
+
 int main() {
+
     std::cout << "Fucking Hello, World!" << std::endl;
     auto f = 3.14159f;
     std::cout << "Float=" << f << std::endl;
@@ -116,6 +189,32 @@ int main() {
 
     Interrupt i1;
     Interrupt i2;
+
+
+    /*// here is where you'd put code that needs to be running all the time.
+
+    // check to see if it's time to blink the LED; that is, if the difference
+    // between the current time and last time you blinked the LED is bigger than
+    // the interval at which you want to blink the LED.
+    unsigned long currentMillis = millis();
+
+    if (currentMillis - previousMillis >= interval) {
+        // save the last time you blinked the LED
+        previousMillis = currentMillis;
+
+        // if the LED is off turn it on and vice-versa:
+        if (ledState == LOW) {
+            ledState = HIGH;
+        } else {
+            ledState = LOW;
+        }
+
+        // set the LED with the ledState of the variable:
+        digitalWrite(ledPin, ledState);
+    }
+     */
+
+
 
     std::cout << std::endl << std::endl;
     std::cout << "goodbye" << std::endl;

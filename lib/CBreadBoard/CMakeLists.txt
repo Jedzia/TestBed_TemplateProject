@@ -20,14 +20,15 @@ set(HeaderFiles
         include/CBreadBoard/serial.h
         include/CBreadBoard/Arduino.h
         include/CBreadBoard/cbreadboard.h
-        include/CBreadBoard/interrupt.h)
+        include/CBreadBoard/interrupt.h
+        include/CBreadBoard/memory.h)
 
 set(SourceFiles
         ${PLATFORM_SourceFiles}
         src/library.cpp
         src/serial.cpp
         src/Arduino.cpp
-        src/interrupt.cpp)
+        src/interrupt.cpp src/memory.cpp)
 
 include_directories(include)
 add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
