@@ -5,15 +5,15 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="STD17" targetName="gtest" />
-      <config projectName="STD17" targetName="main_test" />
-      <config projectName="STD17" targetName="gtest_main" />
-      <config projectName="STD17" targetName="STD17lib" />
-      <config projectName="STD17" targetName="gmock" />
-      <config projectName="STD17" targetName="CBreadBoard" />
-      <config projectName="STD17" targetName="STD17" />
-      <config projectName="STD17" targetName="Google_Tests_run" />
-      <config projectName="STD17" targetName="gmock_main" />
+      <config projectName="TestBed_MCU" targetName="gmock_main" />
+      <config projectName="TestBed_MCU" targetName="STD17lib" />
+      <config projectName="TestBed_MCU" targetName="Google_Tests_run" />
+      <config projectName="TestBed_MCU" targetName="gtest" />
+      <config projectName="TestBed_MCU" targetName="gmock" />
+      <config projectName="TestBed_MCU" targetName="gtest_main" />
+      <config projectName="TestBed_MCU" targetName="main_test" />
+      <config projectName="TestBed_MCU" targetName="CBreadBoard" />
+      <config projectName="TestBed_MCU" targetName="STD17" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -24,10 +24,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/googletest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -98,59 +97,59 @@
     </option>
   </component>
   <component name="RunManager" selected="CMake Application.STD17 local">
-    <configuration name="DateConverterFixture" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="Google_Tests_run" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="STD17" RUN_TARGET_NAME="Google_Tests_run" TEST_CLASS="DateConverterFixture" TEST_MODE="SUITE_TEST">
+    <configuration name="DateConverterFixture" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="Google_Tests_run" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="TestBed_MCU" RUN_TARGET_NAME="Google_Tests_run" TEST_CLASS="DateConverterFixture" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CBreadBoard" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="CBreadBoard" CONFIG_NAME="Debug mips">
+    <configuration name="CBreadBoard" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="CBreadBoard" CONFIG_NAME="Debug mips">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Google_Tests_run" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="Google_Tests_run" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="STD17" RUN_TARGET_NAME="Google_Tests_run">
+    <configuration name="Google_Tests_run" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="Google_Tests_run" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="TestBed_MCU" RUN_TARGET_NAME="Google_Tests_run">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="STD17 local" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="STD17" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="STD17" RUN_TARGET_NAME="STD17">
+    <configuration name="STD17 local" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="STD17" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="TestBed_MCU" RUN_TARGET_NAME="STD17">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="STD17" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="STD17" CONFIG_NAME="Debug local" RUN_PATH="$PROJECT_DIR$/run.bat">
+    <configuration name="STD17" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="STD17" CONFIG_NAME="Debug local" RUN_PATH="$PROJECT_DIR$/run.bat">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_cp to \\VUDUO2X dlang" />
       </method>
     </configuration>
-    <configuration name="STD17lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="STD17lib" CONFIG_NAME="Debug local">
+    <configuration name="STD17lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="STD17lib" CONFIG_NAME="Debug local">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="gmock" CONFIG_NAME="Debug local">
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="gmock" CONFIG_NAME="Debug local">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="gmock_main" CONFIG_NAME="Debug local">
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="gmock_main" CONFIG_NAME="Debug local">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="gtest" CONFIG_NAME="Debug local">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="gtest" CONFIG_NAME="Debug local">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="gtest_main" CONFIG_NAME="Debug local">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="gtest_main" CONFIG_NAME="Debug local">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="STD17" TARGET_NAME="main_test" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="STD17" RUN_TARGET_NAME="main_test">
+    <configuration name="main_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="main_test" CONFIG_NAME="Debug local" RUN_TARGET_PROJECT_NAME="TestBed_MCU" RUN_TARGET_NAME="main_test">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -197,7 +196,8 @@
       <workItem from="1572724716819" duration="3271000" />
       <workItem from="1572780888806" duration="7459000" />
       <workItem from="1573187127957" duration="17633000" />
-      <workItem from="1573487899406" duration="550000" />
+      <workItem from="1573487899406" duration="695000" />
+      <workItem from="1573489455609" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -269,6 +269,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/test/lib" />
+    </ignored-roots>
     <MESSAGE value="linux and windows platform network" />
     <MESSAGE value="adjusted delay, no patience here:P" />
     <MESSAGE value="prepared interrupt simulation and static construction" />
