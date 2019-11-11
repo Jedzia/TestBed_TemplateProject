@@ -10,8 +10,8 @@
       <config projectName="STD17" targetName="gtest_main" />
       <config projectName="STD17" targetName="STD17lib" />
       <config projectName="STD17" targetName="gmock" />
-      <config projectName="STD17" targetName="STD17" />
       <config projectName="STD17" targetName="CBreadBoard" />
+      <config projectName="STD17" targetName="STD17" />
       <config projectName="STD17" targetName="Google_Tests_run" />
       <config projectName="STD17" targetName="gmock_main" />
     </generated>
@@ -24,8 +24,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/googletest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lib" beforeDir="false" afterPath="$PROJECT_DIR$/test/lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,9 +60,6 @@
     <option name="directoryName" value="LLMpkJLz" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="OCResolveContextSettings">
-    <option name="configuration" value="0-CBreadBoard" />
-  </component>
   <component name="ProjectId" id="1SeA8FA3kKVgIUe9EcKqjqh6ujn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -198,6 +197,7 @@
       <workItem from="1572724716819" duration="3271000" />
       <workItem from="1572780888806" duration="7459000" />
       <workItem from="1573187127957" duration="17633000" />
+      <workItem from="1573487899406" duration="550000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>

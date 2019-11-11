@@ -1,6 +1,6 @@
 
 project(Google_tests)
-add_subdirectory(lib)
+add_subdirectory(googletest)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
@@ -16,7 +16,7 @@ add_dependencies(main_test STD17)
 add_test(NAME test_main COMMAND main_test)
 
 # adding the Google_Tests_run target
-add_executable(Google_Tests_run GoogleTest.cpp)
+add_executable(Google_Tests_run GoogleTest1.cpp)
 
 # linking Google_Tests_run with DateConverter_lib which will be tested
 #target_link_libraries(Google_Tests_run DateConverter_lib)
