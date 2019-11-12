@@ -172,6 +172,16 @@ int main() {
 //    pinMode(LED2Pin, OUTPUT);  // enable LED1 output
 
 
+    std::cout << std::endl;
+    std::cout << "Input devices:" << std::endl;
+
+    //for (int i = 1; i < 10; ++i) {
+    InputDevice joystick(1);
+    joystick.DoSomething();
+    // }
+
+    std::cout << std::endl;
+
 
     // State-Machine Mambo Jumbo
 

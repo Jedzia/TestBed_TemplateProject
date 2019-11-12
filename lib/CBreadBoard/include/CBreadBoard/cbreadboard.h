@@ -8,6 +8,7 @@
 #include <CBreadBoard/io.h>
 #include <CBreadBoard/serial.h>
 #include <CBreadBoard/interrupt.h>
+#include <CBreadBoard/io/input.h>
 
 namespace cbb {
 //#include <CBreadBoard/serial.h>

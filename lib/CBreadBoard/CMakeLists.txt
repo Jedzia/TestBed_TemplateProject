@@ -21,14 +21,22 @@ set(HeaderFiles
         include/CBreadBoard/Arduino.h
         include/CBreadBoard/cbreadboard.h
         include/CBreadBoard/interrupt.h
-        include/CBreadBoard/memory.h)
+        include/CBreadBoard/memory.h
+        include/CBreadBoard/io.h
+        include/CBreadBoard/io/input.h
+        )
 
 set(SourceFiles
         ${PLATFORM_SourceFiles}
         src/library.cpp
         src/serial.cpp
         src/Arduino.cpp
-        src/interrupt.cpp src/memory.cpp src/io.cpp include/CBreadBoard/io.h)
+        src/interrupt.cpp
+        src/memory.cpp
+        src/io.cpp
+        src/io/input.cpp
+        )
 
 include_directories(include)
 add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
+target_link_libraries(CBreadBoard XInput.lib)

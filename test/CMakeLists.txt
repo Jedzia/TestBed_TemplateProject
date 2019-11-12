@@ -10,7 +10,7 @@ add_executable(main_test main_test.cpp)
 #target_link_libraries(main_test ${Boost_LIBRARIES})
 target_link_libraries(main_test)
 # OUR TEST NEEDS THIS EXECUTABLE TO BE BUILT FIRST...
-add_dependencies(main_test STD17)
+add_dependencies(main_test ArduinoExample01)
 
 # ADD OUR TESTS
 add_test(NAME test_main COMMAND main_test)
