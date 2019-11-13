@@ -5,15 +5,15 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="TestBed_MCU" targetName="gmock_main" />
-      <config projectName="TestBed_MCU" targetName="STD17lib" />
       <config projectName="TestBed_MCU" targetName="ArduinoExample01" />
-      <config projectName="TestBed_MCU" targetName="Google_Tests_run" />
-      <config projectName="TestBed_MCU" targetName="gtest" />
-      <config projectName="TestBed_MCU" targetName="gmock" />
+      <config projectName="TestBed_MCU" targetName="STD17lib" />
+      <config projectName="TestBed_MCU" targetName="gmock_main" />
       <config projectName="TestBed_MCU" targetName="main_test" />
       <config projectName="TestBed_MCU" targetName="gtest_main" />
+      <config projectName="TestBed_MCU" targetName="Google_Tests_run" />
+      <config projectName="TestBed_MCU" targetName="gtest" />
       <config projectName="TestBed_MCU" targetName="CBreadBoard" />
+      <config projectName="TestBed_MCU" targetName="gmock" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -24,14 +24,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/io/input.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/STD17.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/STD17.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/cbreadboard.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,24 +65,25 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/doc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib\CBreadBoard\include\CBreadBoard\avrgcc" />
-      <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib" />
-      <recent name="E:\Projects\VU\cpp\STD17Playground\lib\STD17lib\src\platform\linux" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\Project\lib\CBreadBoard\src\io" />
       <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib\CBreadBoard\src" />
       <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib\CBreadBoard\include\CBreadBoard" />
       <recent name="E:\Projects\VU\cpp\STD17Playground\lib\STD17lib\include\STD17lib" />
       <recent name="E:\Projects\VU\cpp\STD17\lib\STD17lib\include\STD17" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\Project\doc" />
+      <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib\CBreadBoard\include\CBreadBoard\avrgcc" />
+      <recent name="E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed\lib" />
+      <recent name="E:\Projects\VU\cpp\STD17Playground\lib\STD17lib\src\platform\linux" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -202,7 +199,8 @@
       <workItem from="1573187127957" duration="17633000" />
       <workItem from="1573487899406" duration="695000" />
       <workItem from="1573489455609" duration="164000" />
-      <workItem from="1573489624953" duration="5816000" />
+      <workItem from="1573489624953" duration="6720000" />
+      <workItem from="1573599060796" duration="7388000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -291,7 +289,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>205</line>
+          <line>185</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

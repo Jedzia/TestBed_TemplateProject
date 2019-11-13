@@ -45,30 +45,6 @@ void on_trans_light_off_light_on() {
     Serial.println("Transitioning from LIGHT_OFF to LIGHT_ON");
 }
 
-int DUMMY_TCCR1A_LOCATION;
-auto DUMMY_TCCR1A_POINTER = &DUMMY_TCCR1A_LOCATION;
-
-//#define DUMMY_TCCR1A _SFR_MEM8(0x80)
-#define DUMMY_TCCR1A _SFR_MEM8(DUMMY_TCCR1A_POINTER)
-
-void setupIRQ() {
-    DUMMY_TCCR1A = 42;
-    std::cout << "DUMMY_TCCR1A[" << DUMMY_TCCR1A_POINTER << "] = '" << *DUMMY_TCCR1A_POINTER << "'." << std::endl;
-
-    return;
-    //DDRB |= B00100000;  // set pin13 to output without affecting other pins
-    // above is identical to pinMode(LEDPIN, OUTPUT); using Direct Port Manipulation
-    cli();
-    TCCR1A = 0;
-    TCCR1B = 0;
-    OCR1A = 15624 / 8;  // = (target time / timer resolution) - 1 or 1 / 6.4e-5 - 1 = 15624
-    //OCR1A = 15624>>1;  // divide by two >>EDIT added this line<<
-    TCCR1B |= (1 << WGM12);// CTC mode on
-    TCCR1B |= (1 << CS10);// Set CS10 and CS12 bits for 1024 prescaler:
-    TCCR1B |= (1 << CS12);
-    TIMSK1 |= (1 << OCIE1A);// timer compare intrupt
-    sei();
-}
 
 #define ISR(x) void x()
 
@@ -136,6 +112,9 @@ ISR(TIMER1_COMPA_vect) {
 #define LED1Pin      13
 #define LED2Pin       5
 
+void setupIRQ();
+void setup();
+void loop();
 
 int main() {
 
@@ -165,7 +144,7 @@ int main() {
 
     /* MCU Code ToDo: introduce setup() and loop(), later */
 
-    setupIRQ();
+    setup();
 
 
 //    pinMode(LED1Pin, OUTPUT);  // enable LED1 output
@@ -175,13 +154,14 @@ int main() {
     std::cout << std::endl;
     std::cout << "Input devices:" << std::endl;
 
-    //for (int i = 1; i < 10; ++i) {
-    InputDevice joystick(1);
-    joystick.DoSomething();
-    // }
+    for (int i = 1; i < 6; ++i) {
+        InputDevice joystick(1);
+        joystick.DoSomething();
+        delay(200);
+    }
 
     std::cout << std::endl;
-
+    //return 0;
 
     // State-Machine Mambo Jumbo
 
@@ -216,11 +196,16 @@ int main() {
 
     for (int i = 0; i < 5; ++i) {
         std::cout << "Timed loop " << i << std::endl;
+        loop();
 
         Pin led_red("Red LED", "PortA", "LED1Pin");
         digitalWrite(led_red, i % 2);
 
+        /* ToDo: run this via an interrupt simulation */
         TIMER1_COMPA_vect();
+
+        InputDevice joystick(1);
+        joystick.DoSomething();
 
         delay(500);
     }
@@ -268,3 +253,52 @@ int main() {
     return 1;
 }
 
+int DUMMY_TCCR1A_LOCATION;
+auto DUMMY_TCCR1A_POINTER = &DUMMY_TCCR1A_LOCATION;
+
+//#define DUMMY_TCCR1A _SFR_MEM8(0x80)
+#define DUMMY_TCCR1A _SFR_MEM8(DUMMY_TCCR1A_POINTER)
+
+void setupIRQ() {
+    DUMMY_TCCR1A = 42;
+    std::cout << "DUMMY_TCCR1A[" << DUMMY_TCCR1A_POINTER << "] = '" << *DUMMY_TCCR1A_POINTER << "'." << std::endl;
+
+    return;
+    //DDRB |= B00100000;  // set pin13 to output without affecting other pins
+    // above is identical to pinMode(LEDPIN, OUTPUT); using Direct Port Manipulation
+    cli();
+    TCCR1A = 0;
+    TCCR1B = 0;
+    OCR1A = 15624 / 8;  // = (target time / timer resolution) - 1 or 1 / 6.4e-5 - 1 = 15624
+    //OCR1A = 15624>>1;  // divide by two >>EDIT added this line<<
+    TCCR1B |= (1 << WGM12);// CTC mode on
+    TCCR1B |= (1 << CS10);// Set CS10 and CS12 bits for 1024 prescaler:
+    TCCR1B |= (1 << CS12);
+    TIMSK1 |= (1 << OCIE1A);// timer compare intrupt
+    sei();
+}
+
+
+void setup() {
+    /*pinMode(LED1Pin, OUTPUT);  // enable LED1 output
+    pinMode(LED2Pin, OUTPUT);  // enable LED1 output
+
+
+    debInput4.onPressed(onShortPressed);
+    debInput4.onPressedFor(ButtonPressLongDuration, onLongPressed);
+
+    //debInput1.begin();
+    //debInput2.begin();
+    //debInput3.begin();
+    debInput4.begin();
+    //debInput5.begin();
+    //debInput6.begin();
+
+    */
+    setupIRQ();
+}
+
+
+void loop() {
+
+}

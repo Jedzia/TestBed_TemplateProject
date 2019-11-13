@@ -13,8 +13,23 @@ InputDevice::InputDevice(int playerNumber) {
 
 void InputDevice::DoSomething() {
     //std::cout << "InputDevice::DoSomething()" << std::endl;
-    if (IsConnected()) {
-        std::cout << "InputDevice " << _controllerNum << " is Connected" << std::endl;
+    if (!IsConnected())
+        return;
+
+    std::cout << "InputDevice " << _controllerNum << " is Connected" << std::endl;
+    std::cout << "wButtons: '" << GetState().Gamepad.wButtons << "'." << std::endl;
+
+    if(GetState().Gamepad.wButtons & XINPUT_GAMEPAD_A)
+    {
+        Vibrate(65535, 0);
+        std::cout << "InputDevice " << _controllerNum << " XINPUT_GAMEPAD_A" << std::endl;
+    }
+    if(GetState().Gamepad.wButtons & XINPUT_GAMEPAD_B)
+    {
+        //Vibrate(65535, 0);
+        //Vibrate();
+        Vibrate(6535, 6535);
+        std::cout << "InputDevice " << _controllerNum << " XINPUT_GAMEPAD_B" << std::endl;
     }
 }
 
