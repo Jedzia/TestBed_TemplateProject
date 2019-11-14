@@ -13,7 +13,7 @@ namespace cbb {
 
     Interrupt::constructor::constructor() {
         /* do some constructing here … */
-        std::cout << "Interrupt::constructor::constructor()" << std::endl;
+        std::cout << "STATIC Interrupt::constructor::constructor()" << std::endl;
     }
 
     Interrupt::constructor Interrupt::cons;

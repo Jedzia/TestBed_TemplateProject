@@ -1,7 +1,7 @@
 set(SourceFiles
         main.cpp
         MyClass.cpp
-        )
+        usercode.cpp)
 
 #message(WARNING "XXX ${STD17lib_SOURCE_DIR}")
 include_directories(${STD17lib_SOURCE_DIR}/include)

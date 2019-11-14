@@ -24,6 +24,7 @@ set(HeaderFiles
         include/CBreadBoard/memory.h
         include/CBreadBoard/io.h
         include/CBreadBoard/io/input.h
+        include/CBreadBoard/mcu.h
         )
 
 set(SourceFiles
@@ -35,7 +36,7 @@ set(SourceFiles
         src/memory.cpp
         src/io.cpp
         src/io/input.cpp
-        )
+        src/mcu.cpp)
 
 include_directories(include)
 add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
