@@ -19,6 +19,9 @@ public:
     bool IsConnected();
     void Vibrate(int leftVal = 0, int rightVal = 0);
 
+    bool ButtonAPressed();
+    bool ButtonBPressed();
+
 private:
     XINPUT_STATE _controllerState;
     int _controllerNum;

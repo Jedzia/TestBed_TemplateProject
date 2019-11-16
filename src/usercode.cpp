@@ -37,20 +37,49 @@ volatile bool shouldBlinkLong;
 InputDevice joystick(1);
 Pin LED1Pin("Red LED", "PortA", "LED1Pin");
 
+
+// Transition callback functions
+void on_light_on_enter() {
+    Serial.println("Entering LIGHT_ON");
+}
+
+void on_light_on_exit() {
+    Serial.println("Exiting LIGHT_ON");
+}
+
+void on_light_off_enter() {
+    Serial.println("Entering LIGHT_OFF");
+}
+
+void on_light_off_exit() {
+    Serial.println("Exiting LIGHT_OFF");
+}
+
+void on_trans_light_on_light_off() {
+    Serial.println("Transitioning from LIGHT_ON to LIGHT_OFF");
+}
+
+void on_trans_light_off_light_on() {
+    Serial.println("Transitioning from LIGHT_OFF to LIGHT_ON");
+}
+
+State state_light_on(on_light_on_enter, nullptr, &on_light_on_exit);
+State state_light_off(on_light_off_enter, nullptr, &on_light_off_exit);
+Fsm fsm(&state_light_off);
+
+
 //void TIMER1_COMPA_vect2() {
 ISR(TIMER1_COMPA_vect_dummy) {
-    std::cout << "Fn(TIMER1_COMPA_vect)" << std::endl;
+    //std::cout << "    Fn(TIMER1_COMPA_vect)" << std::endl;
 
 //        //PORTB ^= B00100000;// toggles bit which affects pin13
-       if(shouldBlinkShort)
-       {
-           bool led1State = digitalRead(LED1Pin);
-           digitalWrite(LED1Pin, led1State ^ 1);
-           if(led1State)
-           {
-               shouldBlinkShort = false;
-           }
-       }
+    if (shouldBlinkShort) {
+        bool led1State = digitalRead(LED1Pin);
+        digitalWrite(LED1Pin, led1State ^ 1);
+        if (led1State) {
+            shouldBlinkShort = false;
+        }
+    }
 //
 //        /*if(shouldBlinkLong)
 //        {
@@ -91,6 +120,12 @@ ISR(TIMER1_COMPA_vect_dummy) {
 //
 }
 
+
+void simulate() {
+    std::cout << "simulate() called" << std::endl;
+    // setup simulation parameters, e.g. only transition messages are shown for pins
+}
+
 void setupIRQ() {
     DUMMY_TCCR1A = 42;
     std::cout << "DUMMY_TCCR1A[" << DUMMY_TCCR1A_POINTER << "] = '" << *DUMMY_TCCR1A_POINTER << "'." << std::endl;
@@ -108,41 +143,6 @@ void setupIRQ() {
     TCCR1B |= (1 << CS12);
     TIMSK1 |= (1 << OCIE1A);// timer compare intrupt
     sei();
-}
-
-
-// Transition callback functions
-void on_light_on_enter() {
-    Serial.println("Entering LIGHT_ON");
-}
-
-void on_light_on_exit() {
-    Serial.println("Exiting LIGHT_ON");
-}
-
-void on_light_off_enter() {
-    Serial.println("Entering LIGHT_OFF");
-}
-
-void on_light_off_exit() {
-    Serial.println("Exiting LIGHT_OFF");
-}
-
-void on_trans_light_on_light_off() {
-    Serial.println("Transitioning from LIGHT_ON to LIGHT_OFF");
-}
-
-void on_trans_light_off_light_on() {
-    Serial.println("Transitioning from LIGHT_OFF to LIGHT_ON");
-}
-
-State state_light_on(on_light_on_enter, nullptr, &on_light_on_exit);
-State state_light_off(on_light_off_enter, nullptr, &on_light_off_exit);
-Fsm fsm(&state_light_off);
-
-void simulate() {
-    std::cout << "simulate() called" << std::endl;
-    // setup simulation parameters, e.g. only transition messages are shown for pins
 }
 
 void setup() {
@@ -180,12 +180,16 @@ void setup() {
 int i = 0;
 
 void loop() {
-    std::cout << "loop() called" << std::endl;
+    //std::cout << "loop() called" << std::endl;
     //TIMER1_COMPA_vect();
     //for (int i = 0; i < 5; ++i) {
-    std::cout << "Timed loop " << i << std::endl;
+//    if (i % 200 == 0)
+//        std::cout << "loop() iteration " << i << std::endl;
 
-    shouldBlinkShort = true;
+
+    if(!shouldBlinkShort)
+        shouldBlinkShort = joystick.ButtonAPressed();
+    i++;
     return;
     digitalWrite(LED1Pin, i % 2);
 
@@ -212,4 +216,5 @@ void loop() {
     //}
 
 }
+
 #pragma clang diagnostic pop

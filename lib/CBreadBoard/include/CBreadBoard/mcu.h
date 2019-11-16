@@ -12,7 +12,7 @@
 
 class MCU {
 public:
-    void run();
+    static void run();
 };
 
 #endif //TESTBED_MCU_MCU_H

@@ -19,13 +19,11 @@ void InputDevice::DoSomething() {
     std::cout << "InputDevice " << _controllerNum << " is Connected" << std::endl;
     std::cout << "wButtons: '" << GetState().Gamepad.wButtons << "'." << std::endl;
 
-    if(GetState().Gamepad.wButtons & XINPUT_GAMEPAD_A)
-    {
+    if (GetState().Gamepad.wButtons & (uint32_t) XINPUT_GAMEPAD_A) {
         Vibrate(65535, 0);
         std::cout << "InputDevice " << _controllerNum << " XINPUT_GAMEPAD_A" << std::endl;
     }
-    if(GetState().Gamepad.wButtons & XINPUT_GAMEPAD_B)
-    {
+    if (GetState().Gamepad.wButtons & (uint32_t) XINPUT_GAMEPAD_B) {
         //Vibrate(65535, 0);
         //Vibrate();
         Vibrate(6535, 6535);
@@ -50,11 +48,7 @@ bool InputDevice::IsConnected() {
     // Get the state
     DWORD Result = XInputGetState(_controllerNum, &_controllerState);
 
-    if (Result == ERROR_SUCCESS) {
-        return true;
-    } else {
-        return false;
-    }
+    return Result == ERROR_SUCCESS;
 }
 
 void InputDevice::Vibrate(int leftVal, int rightVal) {
@@ -70,5 +64,13 @@ void InputDevice::Vibrate(int leftVal, int rightVal) {
 
     // Vibrate the controller
     XInputSetState(_controllerNum, &Vibration);
+}
+
+bool InputDevice::ButtonAPressed() {
+    return GetState().Gamepad.wButtons & (uint32_t) XINPUT_GAMEPAD_A;
+}
+
+bool InputDevice::ButtonBPressed() {
+    return GetState().Gamepad.wButtons & (uint32_t) XINPUT_GAMEPAD_B;
 }
 
