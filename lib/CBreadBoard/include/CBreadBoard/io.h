@@ -18,15 +18,24 @@ namespace cbb {
     };
 
     class Pin {
-        std::string name;
-        std::string port;
-        std::string pin;
+        std::string _name;
+        std::string _port;
+        std::string _pin;
+        bool _state;
+
     public:
-        Pin(const std::string &name, const std::string &port, const std::string &pin);
+        Pin(std::string name, std::string port, std::string pin) noexcept;
+        virtual ~Pin();
+
+        Pin & operator=(const Pin&) = delete;
+        Pin(const Pin&) = delete;
 
         void setState(bool state);
+        [[nodiscard]] bool getState() const;
+
     };
 
+    bool digitalRead(Pin &pin);
     void digitalWrite(Pin &pin, bool state);
 
 }

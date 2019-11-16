@@ -1,5 +1,3 @@
-#pragma ide diagnostic ignored "readability-static-accessed-through-instance"
-
 #include <iostream>
 #include <memory>
 #include <chrono>
@@ -20,86 +18,8 @@
 using namespace cbb;
 //SerialCom Serial;
 
-// Transition callback functions
-void on_light_on_enter() {
-    Serial.println("Entering LIGHT_ON");
-}
-
-void on_light_on_exit() {
-    Serial.println("Exiting LIGHT_ON");
-}
-
-void on_light_off_enter() {
-    Serial.println("Entering LIGHT_OFF");
-}
-
-void on_light_off_exit() {
-    Serial.println("Exiting LIGHT_OFF");
-}
-
-void on_trans_light_on_light_off() {
-    Serial.println("Transitioning from LIGHT_ON to LIGHT_OFF");
-}
-
-void on_trans_light_off_light_on() {
-    Serial.println("Transitioning from LIGHT_OFF to LIGHT_ON");
-}
 
 
-#define ISR(x) void x()
-
-ISR(TIMER1_COMPA_vect) {
-    std::cout << "Fn(TIMER1_COMPA_vect)" << std::endl;
-
-//        //PORTB ^= B00100000;// toggles bit which affects pin13
-//        if(shouldBlinkShort)
-//        {
-//            bool led1State = digitalRead(LED1Pin);
-//            digitalWrite(LED1Pin, led1State ^ 1);
-//            if(led1State)
-//            {
-//                shouldBlinkShort = false;
-//            }
-//        }
-//
-//        /*if(shouldBlinkLong)
-//        {
-//          bool led2State = digitalRead(LED2Pin);
-//          digitalWrite(LED2Pin, led2State ^ 1);
-//          if(led2State)
-//          {
-//            shouldBlinkLong = false;
-//          }
-//        }*/
-//
-//        if(shortBlink)
-//        {
-//            //bool led2State = digitalRead(LED2Pin);
-//            //digitalWrite(LED2Pin, led2State ^ 1);
-//            //digitalWrite(LED2Pin, !((shortBlink % 4) <= 2));
-//            digitalWrite(LED2Pin, !((shortBlink % 2) ));
-//            /*if(led2State)
-//            {
-//              shouldBlinkLong = false;
-//            }*/
-//            shortBlink--;
-//        }
-//
-//
-//        if(longBlink)
-//        {
-//            //bool led2State = digitalRead(LED2Pin);
-//            //digitalWrite(LED2Pin, led2State ^ 1);
-//            digitalWrite(LED2Pin, !((longBlink % 8) <= 4));
-//            /*if(led2State)
-//            {
-//              shouldBlinkLong = false;
-//            }*/
-//            longBlink--;
-//        }
-//
-//
-}
 
 
 #define butInput1     4
@@ -112,13 +32,9 @@ ISR(TIMER1_COMPA_vect) {
 #define LED1Pin      13
 #define LED2Pin       5
 
-void setupIRQ();
-void setup();
-void loop();
-
 int main() {
 
-    std::cout << "Fucking Hello, World!" << std::endl;
+    std::cout << "Hello, World!" << std::endl;
     auto f = 3.14159f;
     std::cout << "Float=" << f << std::endl;
     std::cout << "Float=" << f * 6 << std::endl;
@@ -142,75 +58,29 @@ int main() {
     std::cout << std::endl;
 
 
-    /* MCU Code ToDo: introduce setup() and loop(), later */
-
-    MCU mcu;
-    mcu.run();
-
-
+    //return 0;
 
 //    pinMode(LED1Pin, OUTPUT);  // enable LED1 output
 //    pinMode(LED2Pin, OUTPUT);  // enable LED1 output
 
 
-    std::cout << std::endl;
+    /*std::cout << std::endl;
     std::cout << "Input devices:" << std::endl;
 
+    InputDevice joystick(1);
     for (int i = 1; i < 6; ++i) {
-        InputDevice joystick(1);
-        joystick.DoSomething();
+         joystick.DoSomething();
         delay(200);
-    }
+    }*/
 
     std::cout << std::endl;
     //return 0;
 
-    // State-Machine Mambo Jumbo
-
-    State state_light_on(on_light_on_enter, nullptr, &on_light_on_exit);
-    State state_light_off(on_light_off_enter, nullptr, &on_light_off_exit);
-    Fsm fsm(&state_light_off);
 
 
-    fsm.add_transition(&state_light_on, &state_light_off,
-                       FLIP_LIGHT_SWITCH,
-                       &on_trans_light_on_light_off);
-    fsm.add_transition(&state_light_off, &state_light_on,
-                       FLIP_LIGHT_SWITCH,
-                       &on_trans_light_off_light_on);
-
-
-
-    // No "fsm.run_machine()" call needed as no "on_state" funcions or timmed transitions exists
-    // that is wrong
-    fsm.run_machine();
-    delay(200);
-    fsm.trigger(FLIP_LIGHT_SWITCH);
-    delay(200);
-    fsm.trigger(FLIP_LIGHT_SWITCH);
-
-    std::cout << std::endl;
-    std::cout << std::endl;
 
     Interrupt i1;
     Interrupt i2;
-
-
-    for (int i = 0; i < 5; ++i) {
-        std::cout << "Timed loop " << i << std::endl;
-        loop();
-
-        Pin led_red("Red LED", "PortA", "LED1Pin");
-        digitalWrite(led_red, i % 2);
-
-        /* ToDo: run this via an interrupt simulation */
-        TIMER1_COMPA_vect();
-
-        InputDevice joystick(1);
-        joystick.DoSomething();
-
-        delay(500);
-    }
 
 
     /*std::cout << "Press any key..." << std::endl;
@@ -248,6 +118,10 @@ int main() {
     }
      */
 
+    /* MCU Code ToDo: introduce setup() and loop(), later */
+
+    MCU mcu;
+    mcu.run();
 
 
     std::cout << std::endl << std::endl;
