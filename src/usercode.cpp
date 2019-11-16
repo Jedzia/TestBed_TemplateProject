@@ -30,11 +30,10 @@ const uint8_t LongBlinkTime = 32;
 volatile uint8_t shortBlink = 0;
 volatile uint8_t longBlink = 0;
 
-volatile bool shouldBlinkShort;
-volatile bool shouldBlinkLong;
+volatile bool shouldBlinkShort = false;
+volatile bool shouldBlinkLong = false;
 
 // IO definitions
-InputDevice joystick(1);
 Pin LED1Pin("Red LED", "PortA", "LED1Pin");
 
 
@@ -185,7 +184,6 @@ void loop() {
     //for (int i = 0; i < 5; ++i) {
 //    if (i % 200 == 0)
 //        std::cout << "loop() iteration " << i << std::endl;
-
 
     if(!shouldBlinkShort)
         shouldBlinkShort = joystick.ButtonAPressed();
