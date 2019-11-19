@@ -41,7 +41,7 @@ void MCU::run() {
 
         Clock::time_point t1 = Clock::now();
         auto elapsed_time = std::chrono::duration_cast<Milliseconds>(t1 - t0);
-        auto duration = Milliseconds(1000);
+        auto duration = Milliseconds(250);
         // Check if time left from initial 2 seconds wait the difference
         if (elapsed_time > duration) {
             TIMER1_COMPA_vect_dummy();

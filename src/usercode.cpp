@@ -72,13 +72,13 @@ ISR(TIMER1_COMPA_vect_dummy) {
     //std::cout << "    Fn(TIMER1_COMPA_vect)" << std::endl;
 
 //        //PORTB ^= B00100000;// toggles bit which affects pin13
-    if (shouldBlinkShort) {
-        bool led1State = digitalRead(LED1Pin);
-        digitalWrite(LED1Pin, led1State ^ 1);
-        if (led1State) {
-            shouldBlinkShort = false;
-        }
-    }
+//   if (shouldBlinkShort) {
+//       bool led1State = digitalRead(LED1Pin);
+//       digitalWrite(LED1Pin, led1State ^ 1);
+//       if (led1State) {
+//           shouldBlinkShort = false;
+//       }
+//   }
 //
 //        /*if(shouldBlinkLong)
 //        {
@@ -90,34 +90,38 @@ ISR(TIMER1_COMPA_vect_dummy) {
 //          }
 //        }*/
 //
-//        if(shortBlink)
-//        {
-//            //bool led2State = digitalRead(LED2Pin);
-//            //digitalWrite(LED2Pin, led2State ^ 1);
-//            //digitalWrite(LED2Pin, !((shortBlink % 4) <= 2));
-//            digitalWrite(LED2Pin, !((shortBlink % 2) ));
-//            /*if(led2State)
-//            {
-//              shouldBlinkLong = false;
-//            }*/
-//            shortBlink--;
-//        }
-//
-//
-//        if(longBlink)
-//        {
-//            //bool led2State = digitalRead(LED2Pin);
-//            //digitalWrite(LED2Pin, led2State ^ 1);
-//            digitalWrite(LED2Pin, !((longBlink % 8) <= 4));
-//            /*if(led2State)
-//            {
-//              shouldBlinkLong = false;
-//            }*/
-//            longBlink--;
-//        }
-//
-//
+        if(shortBlink)
+        {
+            //bool led2State = digitalRead(LED2Pin);
+            //digitalWrite(LED2Pin, led2State ^ 1);
+            //digitalWrite(LED2Pin, !((shortBlink % 4) <= 2));
+            digitalWrite(LED1Pin, !((shortBlink % 2) ));
+            /*if(led2State)
+            {
+              shouldBlinkLong = false;
+            }*/
+            shortBlink--;
+        }
+
+
+        if(longBlink)         {
+            //bool led2State = digitalRead(LED2Pin);
+            //digitalWrite(LED2Pin, led2State ^ 1);
+            digitalWrite(LED1Pin, !((longBlink % 8) <= 4));
+            /*if(led2State)
+            {
+              shouldBlinkLong = false;
+            }*/
+            longBlink--;
+        }
+
+
 }
+
+void blinkShort(uint8_t times) {
+    shortBlink = times * 2 + 1;
+}
+
 
 
 void simulate() {
@@ -174,6 +178,7 @@ void setup() {
                        FLIP_LIGHT_SWITCH,
                        &on_trans_light_off_light_on);
 
+    blinkShort(3);
 }
 
 int i = 0;
@@ -185,8 +190,8 @@ void loop() {
 //    if (i % 200 == 0)
 //        std::cout << "loop() iteration " << i << std::endl;
 
-    if(!shouldBlinkShort)
-        shouldBlinkShort = joystick.ButtonAPressed();
+    if(shortBlink == 0 && joystick.ButtonAPressed())
+        shortBlink = 11;
     i++;
     return;
     digitalWrite(LED1Pin, i % 2);

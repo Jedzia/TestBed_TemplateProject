@@ -6,6 +6,7 @@ if (WIN32)
 
     set(PLATFORM_SourceFiles
             src/platform/win/network.cpp
+            src/platform/win/console.cpp
             )
 else ()
     set(PLATFORM_SourceFiles
@@ -25,7 +26,7 @@ set(HeaderFiles
         include/CBreadBoard/io.h
         include/CBreadBoard/io/input.h
         include/CBreadBoard/mcu.h
-        )
+        include/CBreadBoard/console.h)
 
 set(SourceFiles
         ${PLATFORM_SourceFiles}
