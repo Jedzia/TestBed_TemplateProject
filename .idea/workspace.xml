@@ -23,15 +23,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="blinking led on joystick button A press">
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/console.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/win/console.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/mcu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/mcu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/usercode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/usercode.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +207,7 @@
       <workItem from="1573599060796" duration="27067000" />
       <workItem from="1573931042509" duration="8464000" />
       <workItem from="1574086863859" duration="754000" />
-      <workItem from="1574096389841" duration="2274000" />
+      <workItem from="1574096389841" duration="2678000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -280,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573909322122</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="console colors">
+      <created>1574162518244</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1574162518244</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +312,8 @@
     <MESSAGE value="rudimentary pin definitions and interrupt call" />
     <MESSAGE value="restructured more stuff into usercode, fixed vanishing strings" />
     <MESSAGE value="blinking led on joystick button A press" />
-    <option name="LAST_COMMIT_MESSAGE" value="blinking led on joystick button A press" />
+    <MESSAGE value="console colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="console colors" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

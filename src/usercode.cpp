@@ -6,10 +6,10 @@
 #pragma ide diagnostic ignored "cert-err58-cpp"
 #pragma ide diagnostic ignored "readability-static-accessed-through-instance"
 
-#include <iostream>
-#include <STD17lib/fsm.h>
-#include <CBreadBoard/cbreadboard.h>
 #include <CBreadBoard/Arduino.h>
+#include <CBreadBoard/cbreadboard.h>
+#include <STD17lib/fsm.h>
+#include <iostream>
 
 // State machine variables
 #define FLIP_LIGHT_SWITCH 1
@@ -18,7 +18,6 @@ using namespace cbb;
 
 int DUMMY_TCCR1A_LOCATION;
 auto DUMMY_TCCR1A_POINTER = &DUMMY_TCCR1A_LOCATION;
-
 
 // Constants
 const uint32_t ButtonPressLongDuration = 1000;
@@ -35,7 +34,6 @@ volatile bool shouldBlinkLong = false;
 
 // IO definitions
 Pin LED1Pin("Red LED", "PortA", "LED1Pin");
-
 
 // Transition callback functions
 void on_light_on_enter() {
@@ -66,7 +64,6 @@ State state_light_on(on_light_on_enter, nullptr, &on_light_on_exit);
 State state_light_off(on_light_off_enter, nullptr, &on_light_off_exit);
 Fsm fsm(&state_light_off);
 
-
 //void TIMER1_COMPA_vect2() {
 ISR(TIMER1_COMPA_vect_dummy) {
     //std::cout << "    Fn(TIMER1_COMPA_vect)" << std::endl;
@@ -90,39 +87,33 @@ ISR(TIMER1_COMPA_vect_dummy) {
 //          }
 //        }*/
 //
-        if(shortBlink)
-        {
-            //bool led2State = digitalRead(LED2Pin);
-            //digitalWrite(LED2Pin, led2State ^ 1);
-            //digitalWrite(LED2Pin, !((shortBlink % 4) <= 2));
-            digitalWrite(LED1Pin, !((shortBlink % 2) ));
-            /*if(led2State)
-            {
-              shouldBlinkLong = false;
-            }*/
-            shortBlink--;
-        }
+    if (shortBlink) {
+        //bool led2State = digitalRead(LED2Pin);
+        //digitalWrite(LED2Pin, led2State ^ 1);
+        //digitalWrite(LED2Pin, !((shortBlink % 4) <= 2));
+        digitalWrite(LED1Pin, !((shortBlink % 2)));
+        /*if(led2State)
+           {
+           shouldBlinkLong = false;
+           }*/
+        shortBlink--;
+    }
 
-
-        if(longBlink)         {
-            //bool led2State = digitalRead(LED2Pin);
-            //digitalWrite(LED2Pin, led2State ^ 1);
-            digitalWrite(LED1Pin, !((longBlink % 8) <= 4));
-            /*if(led2State)
-            {
-              shouldBlinkLong = false;
-            }*/
-            longBlink--;
-        }
-
-
+    if (longBlink) {
+        //bool led2State = digitalRead(LED2Pin);
+        //digitalWrite(LED2Pin, led2State ^ 1);
+        digitalWrite(LED1Pin, !((longBlink % 8) <= 4));
+        /*if(led2State)
+           {
+           shouldBlinkLong = false;
+           }*/
+        longBlink--;
+    }
 }
 
 void blinkShort(uint8_t times) {
     shortBlink = times * 2 + 1;
 }
-
-
 
 void simulate() {
     std::cout << "simulate() called" << std::endl;
@@ -134,6 +125,7 @@ void setupIRQ() {
     std::cout << "DUMMY_TCCR1A[" << DUMMY_TCCR1A_POINTER << "] = '" << *DUMMY_TCCR1A_POINTER << "'." << std::endl;
 
     return;
+
     //DDRB |= B00100000;  // set pin13 to output without affecting other pins
     // above is identical to pinMode(LEDPIN, OUTPUT); using Direct Port Manipulation
     cli();
@@ -141,34 +133,32 @@ void setupIRQ() {
     TCCR1B = 0;
     OCR1A = 15624 / 8;  // = (target time / timer resolution) - 1 or 1 / 6.4e-5 - 1 = 15624
     //OCR1A = 15624>>1;  // divide by two >>EDIT added this line<<
-    TCCR1B |= (1 << WGM12);// CTC mode on
-    TCCR1B |= (1 << CS10);// Set CS10 and CS12 bits for 1024 prescaler:
+    TCCR1B |= (1 << WGM12); // CTC mode on
+    TCCR1B |= (1 << CS10); // Set CS10 and CS12 bits for 1024 prescaler:
     TCCR1B |= (1 << CS12);
-    TIMSK1 |= (1 << OCIE1A);// timer compare intrupt
+    TIMSK1 |= (1 << OCIE1A); // timer compare intrupt
     sei();
-}
+} // setupIRQ
 
 void setup() {
     std::cout << "setup() called" << std::endl;
 
     /*pinMode(LED1Pin, OUTPUT);  // enable LED1 output
-    pinMode(LED2Pin, OUTPUT);  // enable LED1 output
+       pinMode(LED2Pin, OUTPUT);  // enable LED1 output
 
 
-    debInput4.onPressed(onShortPressed);
-    debInput4.onPressedFor(ButtonPressLongDuration, onLongPressed);
+       debInput4.onPressed(onShortPressed);
+       debInput4.onPressedFor(ButtonPressLongDuration, onLongPressed);
 
-    //debInput1.begin();
-    //debInput2.begin();
-    //debInput3.begin();
-    debInput4.begin();
-    //debInput5.begin();
-    //debInput6.begin();
+       //debInput1.begin();
+       //debInput2.begin();
+       //debInput3.begin();
+       debInput4.begin();
+       //debInput5.begin();
+       //debInput6.begin();
 
-    */
+     */
     setupIRQ();
-
-
 
     // State-Machine Mambo Jumbo
     fsm.add_transition(&state_light_on, &state_light_off,
@@ -190,17 +180,19 @@ void loop() {
 //    if (i % 200 == 0)
 //        std::cout << "loop() iteration " << i << std::endl;
 
-    if(shortBlink == 0 && joystick.ButtonAPressed())
+    if (shortBlink == 0 && joystick.ButtonAPressed()) {
         shortBlink = 11;
+    }
+
     i++;
     return;
+
     digitalWrite(LED1Pin, i % 2);
 
     /* ToDo: run this via an interrupt simulation */
     //TIMER1_COMPA_vect();
 
     joystick.DoSomething();
-
 
     // No "fsm.run_machine()" call needed as no "on_state" funcions or timmed transitions exists
     // that is wrong
@@ -213,11 +205,9 @@ void loop() {
     std::cout << std::endl;
     std::cout << std::endl;
 
-
     i++;
     delay(500);
     //}
-
-}
+} // loop
 
 #pragma clang diagnostic pop
