@@ -22,11 +22,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="uncrustified">
+    <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="use ncurses">
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/internal/display.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/display/display.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +60,9 @@
     <option name="directoryName" value="LLMpkJLz" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-CBreadBoard" />
+  </component>
   <component name="ProjectId" id="1SeA8FA3kKVgIUe9EcKqjqh6ujn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -69,7 +73,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -203,7 +207,7 @@
       <workItem from="1573931042509" duration="8464000" />
       <workItem from="1574086863859" duration="754000" />
       <workItem from="1574096389841" duration="4384000" />
-      <workItem from="1574332837694" duration="8367000" />
+      <workItem from="1574332837694" duration="10017000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -282,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574162996782</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="use ncurses">
+      <created>1574342822836</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1574342822836</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +328,8 @@
     <MESSAGE value="blinking led on joystick button A press" />
     <MESSAGE value="console colors" />
     <MESSAGE value="uncrustified" />
-    <option name="LAST_COMMIT_MESSAGE" value="uncrustified" />
+    <MESSAGE value="use ncurses" />
+    <option name="LAST_COMMIT_MESSAGE" value="use ncurses" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -330,7 +342,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp</url>
-          <line>10</line>
+          <line>8</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

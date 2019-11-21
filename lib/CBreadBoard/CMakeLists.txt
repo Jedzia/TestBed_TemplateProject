@@ -26,7 +26,8 @@ set(HeaderFiles
         include/CBreadBoard/io.h
         include/CBreadBoard/io/input.h
         include/CBreadBoard/mcu.h
-        include/CBreadBoard/console.h)
+        include/CBreadBoard/console.h
+        include/CBreadBoard/internal/display.h)
 
 set(SourceFiles
         ${PLATFORM_SourceFiles}
@@ -37,7 +38,8 @@ set(SourceFiles
         src/memory.cpp
         src/io.cpp
         src/io/input.cpp
-        src/mcu.cpp)
+        src/mcu.cpp
+        src/display/display.cpp)
 
 find_package(curses REQUIRED)
 include_directories(include)

@@ -7,8 +7,8 @@
 #include <utility>
 #include "CBreadBoard/io.h"
 #include <CBreadBoard/console.h>
+#include <CBreadBoard/internal/display.h>
 #include <windows.h>
-#include <curses.h>
 
 namespace cbb {
 
@@ -19,12 +19,7 @@ namespace cbb {
               _state(false) {
         std::cout << "Pin[" << _name << "]:Created " << std::endl;
 
-        initscr();
-        cbreak();
-        noecho();
-        clear();
-        mvaddstr(3, 0, "NCurses Interface");
-        refresh();
+        initDisplay();
     }
 
     Pin::~Pin() {
@@ -56,9 +51,7 @@ namespace cbb {
             //std::cout << "    [" << _name << "]:setting state " << state << std::endl;
             std::stringstream s;
             s << "    [" << _name << "]:setting state " << state;
-            std::cout << s.str() << std::endl;
-            mvaddstr(5, 0, s.str().c_str());
-            refresh();
+            printc(5, 2, s.str());
             setTextAttributes(0);
         }
         _state = state;
