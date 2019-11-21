@@ -109,3 +109,6 @@ _deps
 *.app
 
 /cmake-build-*
+*.unc-backup.*
+*.unc-backup~
+

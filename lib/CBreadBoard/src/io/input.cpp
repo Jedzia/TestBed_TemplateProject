@@ -74,3 +74,7 @@ bool InputDevice::ButtonBPressed() {
     return GetState().Gamepad.wButtons & (uint32_t) XINPUT_GAMEPAD_B;
 }
 
+bool InputDevice::ButtonXPressed() {
+    return GetState().Gamepad.wButtons & (uint32_t) XINPUT_GAMEPAD_X;
+}
+

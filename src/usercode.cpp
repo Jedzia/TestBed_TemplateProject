@@ -115,6 +115,10 @@ void blinkShort(uint8_t times) {
     shortBlink = times * 2 + 1;
 }
 
+void blinkLong(uint8_t times) {
+    longBlink = times * 8 * 2 + 1;
+}
+
 void simulate() {
     std::cout << "simulate() called" << std::endl;
     // setup simulation parameters, e.g. only transition messages are shown for pins
@@ -181,7 +185,13 @@ void loop() {
 //        std::cout << "loop() iteration " << i << std::endl;
 
     if (shortBlink == 0 && joystick.ButtonAPressed()) {
-        shortBlink = 11;
+        blinkShort(5);
+        //shortBlink = 11;
+    }
+
+    if (longBlink == 0 && joystick.ButtonXPressed()) {
+        blinkLong(5);
+        //longBlink = 11;
     }
 
     i++;

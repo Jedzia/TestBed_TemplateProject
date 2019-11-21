@@ -28,6 +28,8 @@ public:
 
     bool ButtonBPressed();
 
+    bool ButtonXPressed();
+
 private:
     XINPUT_STATE _controllerState = {};
     int _controllerNum;
