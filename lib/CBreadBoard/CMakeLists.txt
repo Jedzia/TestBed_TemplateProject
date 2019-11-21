@@ -39,6 +39,10 @@ set(SourceFiles
         src/io/input.cpp
         src/mcu.cpp)
 
+find_package(curses REQUIRED)
 include_directories(include)
+include_directories(${CURSES_INCLUDE_DIR}/ncurses)
+
 add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
 target_link_libraries(CBreadBoard XInput.lib)
+target_link_libraries(CBreadBoard ${CURSES_LIBRARIES})

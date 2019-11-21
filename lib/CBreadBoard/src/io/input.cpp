@@ -12,7 +12,7 @@ InputDevice::InputDevice(int playerNumber) {
 }
 
 void InputDevice::DoSomething() {
-    //std::cout << "InputDevice::DoSomething()" << std::endl;
+    std::cout << "InputDevice::DoSomething()" << std::endl;
     if (!IsConnected())
         return;
 
