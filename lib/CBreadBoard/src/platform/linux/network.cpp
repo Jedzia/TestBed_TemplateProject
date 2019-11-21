@@ -16,32 +16,36 @@
 #include <arpa/inet.h> /* IP address conversion stuff */
 #include <netdb.h>
 
-using namespace std;
+namespace cbb {
 
-bool Network::initialized = false;
+    using namespace std;
+
+    bool Network::initialized = false;
 //static WSADATA wsa;
 
-void Network::getName() {
+    void Network::getName() {
 
 
-}
-
-Network::Network() {
-    if (!initialized) {
-        cout << "Initialising Winsock..." << endl;
-        /*if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0) {
-            printf("Failed. Error Code : %d", WSAGetLastError());
-            //return 1;
-        }*/
-
-        printf("Initialised.");
     }
-}
 
-Network::~Network() {
-    if (!initialized) {
-        cout << "Winsock cleanup..." << endl;
-        //WSACleanup();
-        initialized = false;
+    Network::Network() {
+        if (!initialized) {
+            cout << "Initialising Winsock..." << endl;
+            /*if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0) {
+                printf("Failed. Error Code : %d", WSAGetLastError());
+                //return 1;
+            }*/
+
+            printf("Initialised.");
+        }
     }
+
+    Network::~Network() {
+        if (!initialized) {
+            cout << "Winsock cleanup..." << endl;
+            //WSACleanup();
+            initialized = false;
+        }
+    }
+
 }

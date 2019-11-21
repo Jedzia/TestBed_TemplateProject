@@ -11,29 +11,32 @@
 #include <windows.h>
 #include <XInput.h>
 
-class InputDevice {
-public:
-    InputDevice(int playerNumber);
+namespace cbb {
 
-    // [[deprecated("Use only for development testing")]]
-    void DoSomething();
+    class InputDevice {
+    public:
+        explicit InputDevice(int playerNumber);
 
-    XINPUT_STATE GetState();
+        // [[deprecated("Use only for development testing")]]
+        void DoSomething();
 
-    bool IsConnected();
+        XINPUT_STATE GetState();
 
-    void Vibrate(int leftVal = 0, int rightVal = 0);
+        bool IsConnected();
 
-    bool ButtonAPressed();
+        void Vibrate(int leftVal = 0, int rightVal = 0);
 
-    bool ButtonBPressed();
+        bool ButtonAPressed();
 
-    bool ButtonXPressed();
+        bool ButtonBPressed();
 
-private:
-    XINPUT_STATE _controllerState = {};
-    int _controllerNum;
-};
+        bool ButtonXPressed();
 
+    private:
+        XINPUT_STATE _controllerState = {};
+        int _controllerNum;
+    };
+
+}
 
 #endif //TESTBED_MCU_INPUT_H

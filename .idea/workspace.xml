@@ -23,11 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="use ncurses">
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/internal/display.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/display/display.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/io/input.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/io/input.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/library.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/library.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/mcu.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/mcu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/network.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/network.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/library.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/library.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/mcu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/mcu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/linux/network.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/linux/network.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/win/network.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/win/network.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/library.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/library.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +214,7 @@
       <workItem from="1573931042509" duration="8464000" />
       <workItem from="1574086863859" duration="754000" />
       <workItem from="1574096389841" duration="4384000" />
-      <workItem from="1574332837694" duration="10017000" />
+      <workItem from="1574332837694" duration="11321000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -342,7 +349,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp</url>
-          <line>8</line>
+          <line>10</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

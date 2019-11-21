@@ -18,8 +18,6 @@ namespace cbb {
               _pin(std::move(pin)),
               _state(false) {
         std::cout << "Pin[" << _name << "]:Created " << std::endl;
-
-        initDisplay();
     }
 
     Pin::~Pin() {

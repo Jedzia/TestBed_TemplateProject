@@ -11,12 +11,16 @@
 #define DUMMY_TCCR1A _SFR_MEM8(DUMMY_TCCR1A_POINTER)
 #define ISR(x) void x()
 
+namespace cbb {
 
-class MCU {
-public:
-    static void run();
-};
+    class MCU {
+    public:
+        MCU();
 
-extern InputDevice joystick;
+        static void run();
+    };
 
+    extern InputDevice joystick;
+
+}
 #endif //TESTBED_MCU_MCU_H

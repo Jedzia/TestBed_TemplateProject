@@ -11,32 +11,36 @@
 //#endif
 
 
-using namespace std;
+namespace cbb {
 
-bool Network::initialized = false;
-static WSADATA wsa;
+    using namespace std;
 
-void Network::getName() {
+    bool Network::initialized = false;
+    static WSADATA wsa;
+
+    void Network::getName() {
 
 
-}
+    }
 
-Network::Network() {
-    if (!initialized) {
-        cout << "Initialising Winsock..." << endl;
-        if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0) {
-            printf("Failed. Error Code : %d", WSAGetLastError());
-            //return 1;
+    Network::Network() {
+        if (!initialized) {
+            cout << "Initialising Winsock..." << endl;
+            if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0) {
+                printf("Failed. Error Code : %d", WSAGetLastError());
+                //return 1;
+            }
+
+            printf("Initialised.");
         }
-
-        printf("Initialised.");
     }
-}
 
-Network::~Network() {
-    if (!initialized) {
-        cout << "Winsock cleanup..." << endl;
-        WSACleanup();
-        initialized = false;
+    Network::~Network() {
+        if (!initialized) {
+            cout << "Winsock cleanup..." << endl;
+            WSACleanup();
+            initialized = false;
+        }
     }
+
 }

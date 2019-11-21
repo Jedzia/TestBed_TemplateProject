@@ -5,18 +5,20 @@
 #ifndef STD17_NETWORK_H
 #define STD17_NETWORK_H
 
+namespace cbb {
 
-class Network {
-public:
-    Network();
+    class Network {
+    public:
+        Network();
 
-    virtual ~Network();
+        virtual ~Network();
 
-    void getName();
+        void getName();
 
-private:
-    static bool initialized;
-};
+    private:
+        static bool initialized;
+    };
 
+}
 
 #endif //STD17_NETWORK_H

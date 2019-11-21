@@ -5,6 +5,10 @@
 #include "CBreadBoard/library.h"
 #include <iostream>
 
-MyLibrary::MyLibrary() {
-    std::cout << "Constructor CBreadBoard::MyLibrary()" << std::endl;
+namespace cbb {
+
+    MyLibrary::MyLibrary() {
+        std::cout << "Constructor CBreadBoard::MyLibrary()" << std::endl;
+    }
+
 }

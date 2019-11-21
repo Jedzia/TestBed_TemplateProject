@@ -6,10 +6,13 @@
 #define STD17_LIBRARY_H
 
 
-class MyLibrary {
-public:
-    MyLibrary();
-};
+namespace cbb {
 
+    class MyLibrary {
+    public:
+        MyLibrary();
+    };
+
+}
 
 #endif //STD17_LIBRARY_H

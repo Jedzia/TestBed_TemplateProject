@@ -5,11 +5,9 @@
 #ifndef STD17_LIBRARY_H
 #define STD17_LIBRARY_H
 
-
 class MyLibrary {
 public:
     MyLibrary();
 };
-
 
 #endif //STD17_LIBRARY_H
