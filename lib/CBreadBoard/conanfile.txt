@@ -1,9 +1,0 @@
-[requires]
-#ncurses/6.1@conan/stable
-#getopt/2.0@bincrafters/stable
-#excel/1.1.4@igormironchik/stable
-Assimp/4.1.0@jacmoe/stable
-
-[generators]
-cmake
- 

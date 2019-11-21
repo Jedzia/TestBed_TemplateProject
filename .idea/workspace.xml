@@ -23,11 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/conanbuildinfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/conanbuildinfo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/conanfile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/conaninfo.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +204,7 @@
       <workItem from="1573931042509" duration="8464000" />
       <workItem from="1574086863859" duration="754000" />
       <workItem from="1574096389841" duration="4384000" />
-      <workItem from="1574332837694" duration="5427000" />
+      <workItem from="1574332837694" duration="5721000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>

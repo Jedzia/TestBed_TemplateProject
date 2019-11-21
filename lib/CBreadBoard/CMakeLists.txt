@@ -39,12 +39,6 @@ set(SourceFiles
         src/io/input.cpp
         src/mcu.cpp)
 
-set(CONAN_EXPORTED TRUE)
-include(conanbuildinfo.cmake)
-conan_basic_setup()
-message(WARNING "CONAN_LIBS '${CONAN_LIBS}'")
-
 include_directories(include)
 add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
-#add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
-target_link_libraries(CBreadBoard XInput.lib ${CONAN_LIBS})
+target_link_libraries(CBreadBoard XInput.lib)
