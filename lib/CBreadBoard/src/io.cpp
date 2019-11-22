@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <utility>
+#include <fmt/core.h>
 #include "CBreadBoard/io.h"
 #include <CBreadBoard/console.h>
 #include <CBreadBoard/internal/display.h>
@@ -46,10 +47,7 @@ namespace cbb {
                 setTextAttributes(BACKGROUND_RED);
             }
 
-            //std::cout << "    [" << _name << "]:setting state " << state << std::endl;
-            std::stringstream s;
-            s << "    [" << _name << "]:setting state " << state;
-            printc(5, 2, s.str());
+            printc(5, 2, fmt::format("    [{}]:setting state {}", _name, state));
             setTextAttributes(0);
         }
         _state = state;

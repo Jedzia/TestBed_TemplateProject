@@ -21,6 +21,15 @@ if (CMAKE_SYSTEM STREQUAL "Linux")
     message("Building MIPS target with ${VUDUO_C_FLAGS}")
 endif ()
 
+if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    #SET(GCC_PROJECT_FLAGS "--enable-clocale")
+    #SET(GCC_PROJECT_LINK_FLAGS    "--enable-clocale")
+
+    #SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} ${GCC_PROJECT_FLAGS}")
+    #SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_PROJECT_FLAGS}")
+    #SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_PROJECT_LINK_FLAGS}")
+endif ()
+
 # ENABLE TESTING WITH CMAKE'S CTEST
 enable_testing()
 #INCLUDE(CTest)

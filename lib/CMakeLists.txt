@@ -1,2 +1,3 @@
+add_subdirectory(fmtlib)
 add_subdirectory(STD17lib)
 add_subdirectory(CBreadBoard)

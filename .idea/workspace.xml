@@ -6,6 +6,7 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="TestBed_MCU" targetName="gmock_main" />
+      <config projectName="TestBed_MCU" targetName="fmt" />
       <config projectName="TestBed_MCU" targetName="STD17lib" />
       <config projectName="TestBed_MCU" targetName="ArduinoExample01" />
       <config projectName="TestBed_MCU" targetName="Google_Tests_run" />
@@ -23,18 +24,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="use ncurses">
+      <change afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/win/printlocales.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fmtlib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/io/input.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/io/input.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/library.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/library.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/mcu.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/mcu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/network.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/network.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/display/display.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/display/display.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/library.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/library.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/mcu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/mcu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/linux/network.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/linux/network.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/win/network.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CBreadBoard/src/platform/win/network.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/library.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/STD17lib/include/STD17lib/library.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,6 +140,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="fmt" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="fmt" CONFIG_NAME="Debug local">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TestBed_MCU" TARGET_NAME="gmock" CONFIG_NAME="Debug local">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -169,6 +173,7 @@
     <list>
       <item itemvalue="CMake Application.STD17 local" />
       <item itemvalue="CMake Application.CBreadBoard" />
+      <item itemvalue="CMake Application.fmt" />
       <item itemvalue="CMake Application.STD17lib" />
       <item itemvalue="CMake Application.ArduinoExample01" />
       <item itemvalue="CMake Application.main_test" />
@@ -214,7 +219,7 @@
       <workItem from="1573931042509" duration="8464000" />
       <workItem from="1574086863859" duration="754000" />
       <workItem from="1574096389841" duration="4384000" />
-      <workItem from="1574332837694" duration="11321000" />
+      <workItem from="1574332837694" duration="16968000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>
@@ -346,11 +351,6 @@
           <url>file://$PROJECT_DIR$/lib/CBreadBoard/include/CBreadBoard/io.h</url>
           <line>20</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/lib/CBreadBoard/src/io/input.cpp</url>
-          <line>10</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

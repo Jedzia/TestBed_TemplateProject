@@ -7,7 +7,7 @@ if (WIN32)
     set(PLATFORM_SourceFiles
             src/platform/win/network.cpp
             src/platform/win/console.cpp
-            )
+            src/platform/win/printlocales.cpp)
 else ()
     set(PLATFORM_SourceFiles
             src/platform/linux/network.cpp
@@ -42,9 +42,12 @@ set(SourceFiles
         src/display/display.cpp)
 
 find_package(curses REQUIRED)
-include_directories(include)
+
+include_directories(${FMT_SOURCE_DIR}/include)
 include_directories(${CURSES_INCLUDE_DIR}/ncurses)
+include_directories(include)
 
 add_library(CBreadBoard ${SourceFiles} ${HeaderFiles})
 target_link_libraries(CBreadBoard XInput.lib)
 target_link_libraries(CBreadBoard ${CURSES_LIBRARIES})
+target_link_libraries(CBreadBoard fmt::fmt)
