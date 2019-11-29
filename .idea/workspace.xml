@@ -5,8 +5,8 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="TestBed_MCU" targetName="fmt" />
       <config projectName="TestBed_MCU" targetName="gmock_main" />
+      <config projectName="TestBed_MCU" targetName="fmt" />
       <config projectName="TestBed_MCU" targetName="STD17lib" />
       <config projectName="TestBed_MCU" targetName="ArduinoExample01" />
       <config projectName="TestBed_MCU" targetName="Google_Tests_run" />
@@ -24,7 +24,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a8202f0-216e-4a9f-8ca2-3a9fc507946b" name="Default Changelist" comment="use ncurses">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/usercode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/usercode.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +72,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -211,6 +213,7 @@
       <workItem from="1574086863859" duration="754000" />
       <workItem from="1574096389841" duration="4384000" />
       <workItem from="1574332837694" duration="21030000" />
+      <workItem from="1575809016165" duration="2687000" />
     </task>
     <task id="LOCAL-00001" summary="linux and windows platform network">
       <created>1572794466923</created>

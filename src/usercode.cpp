@@ -87,7 +87,7 @@ ISR(TIMER1_COMPA_vect_dummy) {
 //          }
 //        }*/
 //
-    if (shortBlink) {
+    if(shortBlink) {
         //bool led2State = digitalRead(LED2Pin);
         //digitalWrite(LED2Pin, led2State ^ 1);
         //digitalWrite(LED2Pin, !((shortBlink % 4) <= 2));
@@ -99,7 +99,7 @@ ISR(TIMER1_COMPA_vect_dummy) {
         shortBlink--;
     }
 
-    if (longBlink) {
+    if(longBlink) {
         //bool led2State = digitalRead(LED2Pin);
         //digitalWrite(LED2Pin, led2State ^ 1);
         digitalWrite(LED1Pin, !((longBlink % 8) <= 4));
@@ -166,11 +166,11 @@ void setup() {
 
     // State-Machine Mambo Jumbo
     fsm.add_transition(&state_light_on, &state_light_off,
-                       FLIP_LIGHT_SWITCH,
-                       &on_trans_light_on_light_off);
+            FLIP_LIGHT_SWITCH,
+            &on_trans_light_on_light_off);
     fsm.add_transition(&state_light_off, &state_light_on,
-                       FLIP_LIGHT_SWITCH,
-                       &on_trans_light_off_light_on);
+            FLIP_LIGHT_SWITCH,
+            &on_trans_light_off_light_on);
 
     blinkShort(3);
 }
@@ -184,12 +184,12 @@ void loop() {
 //    if (i % 200 == 0)
 //        std::cout << "loop() iteration " << i << std::endl;
 
-    if (shortBlink == 0 && joystick.ButtonAPressed()) {
+    if(shortBlink == 0 && joystick.ButtonAPressed()) {
         blinkShort(5);
         //shortBlink = 11;
     }
 
-    if (longBlink == 0 && joystick.ButtonXPressed()) {
+    if(longBlink == 0 && joystick.ButtonXPressed()) {
         blinkLong(5);
         //longBlink = 11;
     }
