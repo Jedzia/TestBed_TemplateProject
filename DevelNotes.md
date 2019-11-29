@@ -40,6 +40,9 @@ check that the user is in the git group and has it as primary ...
 	root@vuduo2:/home/git/.ssh# id jedzia
 		uid=14(jedzia) gid=11(git) groups=11(git),100(users)	
 
+***
+No, this is all fucked up. use user git ...
+
 ## Links involved in the development: ##
 
 Joystick, Arduino, E:\Projects\Elektronik\Arduino\ATtiny\UVTimer\Software\TestBed
