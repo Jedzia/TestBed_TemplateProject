@@ -4,6 +4,32 @@
 
 	git@vuduo2x:/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git
 	git@vuduo2:/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git$ git --bare init
+	
+see https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols
+git@vuduo2x:/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git
+ssh://git@vuduo2x/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git
+
+
+
+git@vuduo2:/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git$ git --bare init
+
+
+** git:// ** 
+git@vuduo2:/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git$ echo > git-daemon-export-ok
+
+Jedzia@pubsiX MINGW64 /e/Projects/Elektronik/Arduino/ATtiny/UVTimer/Software/TestBed/bla (master)
+$ git clone git://vuduo2x/Elektronik/Arduino/TestBed/Project.git
+
+isn rotz, da es keine ordentliche safety gibt
+
+--> https://stackoverflow.com/questions/7632454/how-do-you-use-git-bare-init-repository
+write access: 
+git config receive.denyCurrentBranch ignore
+
+Community edit
+
+git init --bare --shared=group
+	
 
 ## Links involved in the development: ##
 
