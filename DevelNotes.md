@@ -30,6 +30,13 @@ Community edit
 
 git init --bare --shared=group
 	
+****
+better:
+login via key
+https://devops.ionos.com/tutorials/use-ssh-keys-with-putty-on-windows/
+-> D:\Users\Jedzia.pubsiX\.ssh
+	
+	
 
 ## Links involved in the development: ##
 
