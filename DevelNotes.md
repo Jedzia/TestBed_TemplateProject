@@ -1,6 +1,9 @@
 # Devlopers Notes #
 
+## Git ##
 
+	git@vuduo2x:/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git
+	git@vuduo2:/media/stick01/gitroot/Elektronik/Arduino/TestBed/Project.git$ git --bare init
 
 ## Links involved in the development: ##
 
