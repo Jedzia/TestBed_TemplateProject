@@ -35,8 +35,10 @@ better:
 login via key
 https://devops.ionos.com/tutorials/use-ssh-keys-with-putty-on-windows/
 -> D:\Users\Jedzia.pubsiX\.ssh
-	
-	
+check that the user is in the git group and has it as primary ... 	
+	root@vuduo2:/home/git/.ssh# usermod -g git jedzia
+	root@vuduo2:/home/git/.ssh# id jedzia
+		uid=14(jedzia) gid=11(git) groups=11(git),100(users)	
 
 ## Links involved in the development: ##
 
