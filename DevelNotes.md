@@ -68,3 +68,15 @@ https://www.reichelt.de/DC-DC-Wandler-diverse/2/index.html?ACTION=2&LA=2&GROUP=P
 https://www.reichelt.de/index.html?ACTION=446&LA=446&q=pc817;SID=95XXjCkKwQAT4AAB67s8Adacc86ab4a767c0fde0b03232e983e46
 https://de.farnell.com/search/prl/ergebnisse?packaging=cuttape&st=opa356&sort=P_PRICE
 http://www.ti.com/product/OPA356
+
+-------------------------------------------------------------------------
+old stuff:
+
+
+    E:\Projects\VU\cpp\STD17\build>
+    cmake ../ -G"Ninja" -DCMAKE_SYSTEM_NAME=Linux
+    ninja
+    
+    debug mips disabled
+    -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_C_COMPILER_WORKS=1 -DCMAKE_CXX_COMPILER_WORKS=1
+    Toolchain: MIPS GCC
